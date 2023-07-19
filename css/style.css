@@ -1,0 +1,269 @@
+/* #B7D761 */
+/* #33B774 */
+/* #c8f745 */
+/* box-shadow: 10px 10px 0px 0px rgba(0,0,0,1); */
+/* -webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,1); */
+/* -moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,1); */
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Patrick+Hand&display=swap");
+
+:root {
+  --font-display: "Fredoka", sans-serif;
+  --font-sans: "Patrick Hand", cursive;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-neutral: #d9d9d9;
+  --color-1: #17aa52;
+  --color-2: #96c93e;
+  --color-3: #f5e141;
+  --color-4: #b8eb7c;
+  --color-5: #c8f745;
+  --color-error: #f14e1c;
+  --box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+html {
+  box-sizing: border-box;
+  /* outline: black solid 2px; */
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* outline: inherit; */
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  margin-bottom: 0.5rem;
+}
+
+span {
+  font-size: 0.8rem;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color-neutral);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+.container {
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.aside {
+  background-color: var(--color-white);
+  flex: 1.5;
+  border: 3px solid var(--color-black);
+}
+
+.left-side {
+  border-right: none;
+}
+
+.intro {
+  padding: 0.5rem;
+  border-bottom: 3px solid var(--color-black);
+}
+
+.feature {
+  padding: 0.5rem;
+  border-bottom: 3px solid var(--color-black);
+}
+
+.feature ol {
+  padding-left: 1rem;
+}
+
+.main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border: 3px solid var(--color-black);
+}
+
+.main-content {
+  padding: 1rem;
+  height: 80%;
+  /* flex-shrink: 0; */
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border: 2px solid var(--color-black);
+  width: 100%;
+  height: 2rem;
+  padding: 0.4rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.form-control:focus {
+  outline-style: none;
+}
+
+span {
+  color: var(--color-error);
+}
+
+.message {
+  color: var(--color-error);
+  margin-bottom: 1rem;
+}
+
+button {
+  font-size: 1rem;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-5);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-sans);
+}
+
+button:hover {
+  background-color: var(--color-black);
+  color: #ffffff;
+}
+
+.action {
+  text-align: center;
+}
+
+.form-btn {
+  text-align: center;
+}
+
+.reset-btn {
+  background-color: var(--color-3);
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.radio-genders {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.custom-radio input {
+  display: none;
+}
+
+.radio-gender {
+  margin: 10px;
+  width: 106px;
+  height: 106px;
+  border: 3px solid transparent;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 8px #c3c3c367;
+  cursor: pointer;
+}
+
+.radio-btn > i {
+  color: #ffffff;
+  background-color: #ffdae9;
+  font-size: 20px;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(2);
+  padding: 3px;
+  transition: 0.5s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.radio-btn .hobbies-icon {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.radio-btn .hobbies-icon img {
+  display: block;
+  width: 100%;
+}
+.radio-btn .hobbies-icon i {
+  color: #ffdae9;
+  line-height: 80px;
+  font-size: 60px;
+}
+
+.radio-btn .hobbies-icon h3 {
+  color: #555;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.custom-radio input:checked + .radio-btn {
+  border: 2px solid var(--color-black);
+}
+
+.custom-radio input:checked + .radio-btn > i {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.main-footer {
+  height: 20%;
+  background-color: var(--color-5);
+  border-top: 3px solid var(--color-black);
+  padding: 0.5rem;
+}
+
+.right-side {
+  border-left: none;
+}
+
+.bmi-result {
+  padding: 0.5rem;
+}
+
+.main-res {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.res-num {
+  font-size: 3rem;
+}
+
+.suggest-list {
+  padding-left: 1rem;
+}

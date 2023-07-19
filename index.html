@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="aside left-side">
+        <div class="intro">
+          <h2>BMI Kalkulator</h2>
+          <h3>Apa itu BMI Kalkulator?</h3>
+          <p>
+            Berat badan ideal adalah impian semua orang. Tidak hanya memiliki
+            bentuk tubuh yang menunjang penampilan, berat badan ideal juga
+            menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung
+            sekarang di BMI Kalkulator.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Keunggulan Fitur</h3>
+          <ol>
+            <li>Menghitung Berat Badan</li>
+            <li>Menentukan kategori berat badan ideal atau tidak</li>
+            <li>Mempersiapkan program penurunan berat badan</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="main-content">
+          <div class="bmi-cal">
+            <div class="gender form-group">
+              <div class="main-container">
+                <div class="radio-genders">
+                  <label class="custom-radio">
+                    <input
+                      type="radio"
+                      class="gender"
+                      name="gender"
+                      id="male"
+                      value="male"
+                      checked
+                    />
+                    <div class="radio-gender">
+                      <div class="hobbies-icon">
+                        <img src="img/avatar-male.png" />
+                        Male
+                      </div>
+                    </div>
+                  </label>
+                  <label class="custom-radio">
+                    <input
+                      type="radio"
+                      class="gender"
+                      name="gender"
+                      id="female"
+                      value="female"
+                    />
+                    <div class="radio-gender">
+                      <div class="hobbies-icon">
+                        <img src="img/avatar-female.png" />
+                        Female
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="age form-group">
+              <div class="form-label">
+                Berapa usia Anda? (tahun)
+                <span class="required">*required</span>
+              </div>
+              <input
+                class="form-control"
+                id="age"
+                type="number"
+                min="0"
+                placeholder="ex: 18"
+              />
+            </div>
+            <div class="height form-group">
+              <div class="form-label">
+                Berapa tinggi Anda? (cm) <span class="required">*required</span>
+              </div>
+              <input
+                class="form-control"
+                id="height"
+                type="number"
+                min="0"
+                placeholder="ex: 172"
+              />
+            </div>
+            <div class="weight form-group">
+              <div class="form-label">
+                Berapa berat Anda? (kg) <span class="required">*required</span>
+              </div>
+              <input
+                class="form-control"
+                id="weight"
+                type="number"
+                min="0"
+                placeholder="ex: 60"
+              />
+            </div>
+            <div class="action">
+              <div class="message" id="message"></div>
+              <button class="submit-btn" id="calculate">Hitung</button>
+              <button class="reset-btn" id="reset">reset</button>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer">
+          <p>
+            *Disclaimer: Kalkulator hanya berfungsi untuk memprediksi berat
+            badan idealmu secara mandiri. Jika ingin tahu kondisi kesehatanmu
+            lebih lanjut, segera konsultasi ke dokter.
+          </p>
+        </div>
+      </div>
+
+      <div class="aside right-side">
+        <div class="right-container">
+          <div class="bmi-result">
+            <div class="res-title">
+              <h3>Hasil BMI Anda</h3>
+            </div>
+            <div class="main-res">
+              <div class="for-gender" id="for-gender"></div>
+              <div class="res-text" id="res-text"></div>
+              <h1 class="res-num" id="res-num"></h1>
+              <div class="res-sub-text" id="res-sub-text"></div>
+            </div>
+            <div class="suggest">
+              <div class="underweight" id="underweight" style="display: none">
+                <h3>Rekomendasi</h3>
+                <ul class="suggest-list">
+                  <li>
+                    Konsumsi makanan sehat dengan frekuensi lebih sering untuk
+                    menaikkan berat badan.
+                  </li>
+                  <li>Hindari konsumsi obat penambah berat badan instan.</li>
+                  <li>
+                    Bentuk tubuh dengan olahraga angkat beban atau
+                    fleksibilitas.
+                  </li>
+                </ul>
+              </div>
+              <div class="normal" id="normal" style="display: none">
+                <h3>Rekomendasi</h3>
+                <ul class="suggest-list">
+                  <li>Tetap konsumsi makanan sehat dan bergizi seimbang.</li>
+                  <li>Tetap aktif bergerak 30 menit per hari.</li>
+                </ul>
+              </div>
+              <div class="overweight" id="overweight" style="display: none">
+                <h3>Rekomendasi</h3>
+                <ul class="suggest-list">
+                  <li>
+                    Atur pola makan dengan membatasi konsumsi makanan tinggi
+                    kalori, pemanis buatan, dan gula.
+                  </li>
+                  <li>
+                    Penurunan berat badan yang direkomendasikan adalah 0.5-1 kg
+                    setiap pekan.
+                  </li>
+                  <li>Hindari konsumsi penurun berat badan instan.</li>
+                  <li>
+                    Lakukan olahraga 3-4 kali per minggu selama 30 menit,
+                    misalnya bersepeda atau berjalan kaki.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
