@@ -90,6 +90,7 @@ function CalculateBMI() {
     resultSubText.textContent = `Berat ideal Anda adalah ${min.toFixed(1)} - ${max.toFixed(1)} kg.`;
     resultNum.style.color = "red"
     document.getElementById("underweight").style.display = "block";
+    calculateBtn.style.display = "none";
   }
   else if (bmi < 24.9) {
     resultText.textContent = `Normal (Ideal)`;
@@ -97,6 +98,7 @@ function CalculateBMI() {
       `Pertahankan berat anda di ${min.toFixed(1)} - ${max.toFixed(1)} kg.`;
       resultNum.style.color = "green"
     document.getElementById("normal").style.display = "block";
+    calculateBtn.style.display = "none";
   }
   else if (bmi < 29.9) {
     resultText.textContent = `Berat Berlebih`;
@@ -104,6 +106,7 @@ function CalculateBMI() {
       `Berat ideal Anda adalah ${min.toFixed(1)} - ${max.toFixed(1)} kg.`;
       resultNum.style.color = "orange"
     document.getElementById("overweight").style.display = "block";
+    calculateBtn.style.display = "none";
   }
   else {
     resultText.textContent = `Obesitas`;
@@ -111,6 +114,7 @@ function CalculateBMI() {
     `Berat ideal Anda adalah ${min.toFixed(1)} - ${max.toFixed(1)} kg.`;
     resultNum.style.color = "red"
     document.getElementById("overweight").style.display = "block";
+    calculateBtn.style.display = "none";
   }
 }
 
