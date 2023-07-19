@@ -1,4 +1,4 @@
-# Kalkulator BMI - RevoU Assigment
+# BMI Calculator - RevoU Assigment
 
 Kalkulator BMI Sederhana ini dikembangkan sebagai bagian dari Tugas Akhir untuk Kursus RevoU Fundamental. Aplikasi ini memungkinkan pengguna untuk menghitung BMI mereka dengan memasukkan berat badan, tinggi badan, usia, dan jenis kelamin.
 
