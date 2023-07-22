@@ -8,31 +8,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="aside left-side">
-        <div class="intro">
-          <h2>BMI Kalkulator</h2>
-          <h3>Apa itu BMI Kalkulator?</h3>
-          <p>
-            Berat badan ideal adalah impian semua orang. Tidak hanya memiliki
-            bentuk tubuh yang menunjang penampilan, berat badan ideal juga
-            menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung
-            sekarang di BMI Kalkulator.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h3>Keunggulan Fitur</h3>
-          <ol>
-            <li>Menghitung Berat Badan</li>
-            <li>Menentukan kategori berat badan ideal atau tidak</li>
-            <li>Mempersiapkan program penurunan berat badan</li>
-          </ol>
-        </div>
-      </div>
-
       <div class="main">
         <div class="main-content">
-          <div class="bmi-cal">
+          <div class="bmi-cal" id="bmi-cal">
             <div class="gender form-group">
               <div class="main-container">
                 <div class="radio-genders">
@@ -110,24 +88,10 @@
             <div class="action">
               <div class="message" id="message"></div>
               <button class="submit-btn" id="calculate">Hitung</button>
-              <button class="reset-btn" id="reset">reset</button>
             </div>
           </div>
-        </div>
-        <div class="main-footer">
-          <p>
-            *Disclaimer: Kalkulator hanya berfungsi untuk memprediksi berat
-            badan idealmu secara mandiri. Jika ingin tahu kondisi kesehatanmu
-            lebih lanjut, segera konsultasi ke dokter.
-          </p>
-        </div>
-      </div>
-
-      <div class="aside right-side">
-        <div class="right-container">
           <div class="bmi-result">
-            <div class="res-title">
-              <h3>Hasil BMI Anda</h3>
+            <div class="res-title" id="res-title">
             </div>
             <div class="main-res">
               <div class="for-gender" id="for-gender"></div>
@@ -176,7 +140,17 @@
                 </ul>
               </div>
             </div>
+            <div class="action">
+              <button class="reset-btn" id="reset">Kembali</button>
+            </div>
           </div>
+        </div>
+        <div class="main-footer">
+          <p>
+            *Disclaimer: Kalkulator hanya berfungsi untuk memprediksi berat
+            badan idealmu secara mandiri. Jika ingin tahu kondisi kesehatanmu
+            lebih lanjut, segera konsultasi ke dokter.
+          </p>
         </div>
       </div>
     </div>

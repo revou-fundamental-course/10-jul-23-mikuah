@@ -4,6 +4,8 @@ const weightInput = document.getElementById("weight");
 const heightInput = document.getElementById("height");
 const genderInput = document.querySelectorAll('input[name="gender"]');
 const validatedInputs = document.querySelectorAll('input[type="number"]');
+const bmiCal = document.getElementById("bmi-cal");
+const resultTitle = document.getElementById("res-title");
 const resultNum = document.getElementById("res-num");
 const resultText = document.getElementById("res-text");
 const resultSubText = document.getElementById("res-sub-text");
@@ -82,7 +84,12 @@ function CalculateBMI() {
     max = 24.9 * height * height;
   }
 
+  //
+  bmiCal.style.display = "none";
+  resetBtn.style.display = "block";
+
   //display result text
+  resultTitle.innerHTML = `<h3>Hasil BMI Anda</h3>`;
   resultNum.textContent = `${bmi.toFixed(1)}`; // Display the BMI value
 
   if (bmi < 18.5) {
